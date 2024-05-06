@@ -24,7 +24,7 @@ This is a simple web application that functions as a Pokédex, allowing users to
     * Stats (HP, Attack, Defense, etc.)
 * Custom messages are displayed based on the search result:
     * A custom "Added" message appears when a new Pokémon is successfully added.
-    * "Pokédmon Not Found 😢" message appears when a Pokémon cannot be found.
+    * "Pokédmon Not Found 😢" message appears when the searced for Pokédmon does not exist.
     * A custom "Already There" message appears when a previously added Pokémon is searched again.
 ## Additional Notes:
 * The application utilizes the PokéAPI to retrieve Pokémon data.

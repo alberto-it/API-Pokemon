@@ -1,0 +1,115 @@
+body {
+    background-image: linear-gradient(to right, #e0ffe0, #f2f2f2);
+    padding-top: 120px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    max-width: 832px;
+}
+
+.navbar {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border: solid yellowgreen 1.25px;
+    border-radius: 15px;
+}
+
+.navbar-brand {
+    color: lightblue;
+}
+
+.d-flex {
+    padding: 0 23px;
+}
+
+.messages {
+    font-size: 18px;
+    margin: 0 30px
+}
+
+.card {
+    display: grid;
+    max-width: 800px;
+    border-radius: 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    margin: 16px;
+    border: solid yellowgreen 1.25px;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.card-body {
+    display: grid;
+    grid-column: 2;
+}
+
+.pokemon-types {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.pokemon-abilities {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.pokemon-stats {
+    margin-left: 30px;
+    margin-bottom: -5px;
+}
+
+li {
+    line-height: 1.1;
+}
+
+.card-enter {
+    animation: card-appear .5s ease-in-out;
+}
+
+@keyframes card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-75vh);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    body {
+        padding-top: 130px;
+    }
+    .card {
+        margin: 8px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .pokemon-types {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    
+    .pokemon-abilities {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .pokemon-stats  {
+        font-size: 14px;
+    }
+}

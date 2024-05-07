@@ -9,6 +9,10 @@ searchInput.addEventListener('keyup', (event) => {
 });
 
 clearButton.addEventListener('click', () => {
+    if (seenPokemon.length === 1 || seenPokemon.length === 2) {
+        keyType.classList.add('d-none');
+        keyAbility.classList.add('d-none');
+    }
     mainContent.innerHTML = '';
     searchInput.value = '';
     seenPokemon = [];
@@ -84,8 +88,8 @@ function displayPokemonDetails(pokemon) {
     const abilities = document.createElement('p');
     abilities.classList.add('pokemon-abilities');
 
-    types.textContent = `types: ${pokemon.types.map(type => type.type.name).join(', ')}`.toUpperCase();
-    abilities.textContent = `abilities: ${pokemon.abilities.map(ability => ability.ability.name).join(', ')}`.toUpperCase();
+    types.textContent = `${pokemon.types.map(type => type.type.name).join(' | ').toUpperCase()}`;
+    abilities.textContent = `${pokemon.abilities.map(ability => ability.ability.name).join(' | ').toUpperCase()}`;
 
     const stats = document.createElement('ul');
     stats.classList.add('pokemon-stats');
@@ -109,4 +113,21 @@ function displayPokemonDetails(pokemon) {
     mainContent.appendChild(card);
 
     searchInput.value = '';
+
+
+    if (seenPokemon.length === 1) {
+        setTimeout(() => {
+            keyType.classList.remove('d-none');
+            keyAbility.classList.remove('d-none');
+        }, 1000);
+        
+    }
+
+    if (seenPokemon.length === 3) {
+        keyType.classList.add('d-none');
+        keyAbility.classList.add('d-none');
+    }
+
+
+
 }

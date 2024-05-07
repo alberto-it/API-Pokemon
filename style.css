@@ -36,22 +36,16 @@ header {
     font-size: 18px;
 }
 
-#ability {
-    color: darkgreen;
-    top: 255px;
-    right: 35px;
-}
-
 #keyType {
     color: darkblue;
-    top: 190px;
-    right: 45px;
+    top: 150px;
+    right: 30px;
 }
 
 #keyAbility {
     color: darkgreen;
-    top: 255px;
-    right: 35px;
+    top: 170px;
+    right: 20px;
 }
 
 .card {
@@ -141,8 +135,8 @@ li {
         font-size: 14px;
     }
 
-    #keyType, #keyAbility {
+    #keyType,
+    #keyAbility {
         font-size: 14px;
     }
-
 }

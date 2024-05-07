@@ -9,13 +9,11 @@ searchInput.addEventListener('keyup', (event) => {
 });
 
 clearButton.addEventListener('click', () => {
-    if (seenPokemon.length === 1 || seenPokemon.length === 2) {
-        keyType.classList.add('d-none');
-        keyAbility.classList.add('d-none');
-    }
     mainContent.innerHTML = '';
     searchInput.value = '';
     seenPokemon = [];
+    keyType.classList.add('d-none');
+    keyAbility.classList.add('d-none');
 });
 
 searchButton.addEventListener('click', () => {
@@ -73,7 +71,7 @@ function displayPokemonDetails(pokemon) {
 
     const img = document.createElement('img');
     img.classList.add('card-img');
-    img.src = pokemon.sprites.front_default;
+    img.src = pokemon.sprites.other.home.front_default;
 
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
@@ -114,20 +112,15 @@ function displayPokemonDetails(pokemon) {
 
     searchInput.value = '';
 
-
     if (seenPokemon.length === 1) {
         setTimeout(() => {
             keyType.classList.remove('d-none');
             keyAbility.classList.remove('d-none');
         }, 1000);
-        
     }
 
-    if (seenPokemon.length === 3) {
+    setTimeout(() => {
         keyType.classList.add('d-none');
         keyAbility.classList.add('d-none');
-    }
-
-
-
+    }, 10000);
 }

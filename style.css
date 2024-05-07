@@ -30,6 +30,30 @@ header {
     margin: 0 30px
 }
 
+#keyType,
+#keyAbility {
+    position: absolute;
+    font-size: 18px;
+}
+
+#ability {
+    color: darkgreen;
+    top: 255px;
+    right: 35px;
+}
+
+#keyType {
+    color: darkblue;
+    top: 190px;
+    right: 45px;
+}
+
+#keyAbility {
+    color: darkgreen;
+    top: 255px;
+    right: 35px;
+}
+
 .card {
     display: grid;
     max-width: 800px;
@@ -49,16 +73,20 @@ header {
     grid-column: 2;
 }
 
-.pokemon-types {
-    font-size: 18px;
-    margin-left: 20px;
-    margin-bottom: 5px;
-}
-
+.pokemon-types,
 .pokemon-abilities {
     font-size: 18px;
     margin-left: 20px;
+}
+
+.pokemon-types {
+    margin-bottom: 5px;
+    color: darkblue;
+}
+
+.pokemon-abilities {
     margin-bottom: 10px;
+    color: darkgreen;
 }
 
 .pokemon-stats {
@@ -90,6 +118,7 @@ li {
     body {
         padding-top: 130px;
     }
+
     .card {
         margin: 8px;
     }
@@ -98,18 +127,22 @@ li {
         font-size: 18px;
     }
 
-    .pokemon-types {
-        font-size: 15px;
-        margin-left: 10px;
-    }
-    
+    .pokemon-types,
     .pokemon-abilities {
         font-size: 15px;
         margin-left: 10px;
+    }
+
+    .pokemon-abilities {
         margin-bottom: 5px;
     }
 
-    .pokemon-stats  {
+    .pokemon-stats {
         font-size: 14px;
     }
+
+    #keyType, #keyAbility {
+        font-size: 14px;
+    }
+
 }

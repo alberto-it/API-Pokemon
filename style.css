@@ -57,6 +57,11 @@ header {
     border: solid yellowgreen 1.25px;
 }
 
+.card-img {
+    max-width: 300px;
+    padding-left: 30px;
+}
+
 .card-title {
     font-size: 26px;
     font-weight: bold;

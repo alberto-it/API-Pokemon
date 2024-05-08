@@ -114,7 +114,7 @@ function displayPokemonDetails(pokemon) {
 
     if (seenPokemon.length === 1) {
         setTimeout(() => {
-            if (seenPokemon.length !== 0) { // if 'clear' pressed immediately after 'view'
+            if (seenPokemon.length !== 0) { // if 'clear' not pressed immediately after 'view'
                 keyType.classList.remove('d-none');
                 keyAbility.classList.remove('d-none'); 
             }

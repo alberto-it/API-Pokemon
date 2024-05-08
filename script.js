@@ -114,13 +114,15 @@ function displayPokemonDetails(pokemon) {
 
     if (seenPokemon.length === 1) {
         setTimeout(() => {
-            keyType.classList.remove('d-none');
-            keyAbility.classList.remove('d-none');
-        }, 1000);
+            if (seenPokemon.length !== 0) { // if 'clear' pressed immediately after 'view'
+                keyType.classList.remove('d-none');
+                keyAbility.classList.remove('d-none'); 
+            }
+        }, 500);
     }
 
     setTimeout(() => {
         keyType.classList.add('d-none');
         keyAbility.classList.add('d-none');
-    }, 10000);
+    }, 8000);
 }
